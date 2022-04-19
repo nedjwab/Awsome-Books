@@ -3,7 +3,6 @@ let Books = [];
 // Book Div and Template const
 const temp = document.querySelector('.book');
 const bookshelf = document.querySelector('#bookshelf');
-
 const submit = document.querySelector('#submit');
 let idBook = Books.length;
 
@@ -13,14 +12,18 @@ function Book(title, author) {
   this.author = author;
   idBook += 1;
 }
-
 function DeleteBook(id) {
   Books = Books.filter((book) => book.id !== id);
   localStorage.Books = JSON.stringify(Books);
   Books = JSON.parse(localStorage.Books);
+  Books = JSON.parse(localStorage.Books);
   bookshelf.innerHTML = '';
   bookshelf.appendChild(temp);
+  for (let i = 0; i < Books.length; i += 1) {
+    DisplayBook(Books[i]);
+  }
 }
+
 function DisplayBook(book) {
   const BookList = temp.content.cloneNode(true);
   BookList.querySelectorAll('h2')[0].innerHTML = book.title;
