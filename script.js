@@ -12,16 +12,21 @@ function Book(title, author) {
   this.author = author;
   idBook += 1;
 }
-function DeleteBook(id) {
-  Books = Books.filter((book) => book.id !== id);
+function DeleteBook(author) {
+  Books = Books.filter((book) => book.author !== author);
   localStorage.Books = JSON.stringify(Books);
   Books = JSON.parse(localStorage.Books);
   Books = JSON.parse(localStorage.Books);
   bookshelf.innerHTML = '';
   bookshelf.appendChild(temp);
-  for (let i = 0; i < Books.length; i += 1) {
-    DisplayBook(Books[i]);
-  }
+  Books.forEach((book) => {
+    const BookList = temp.content.cloneNode(true);
+    BookList.querySelectorAll('h2')[0].innerHTML = book.title;
+    BookList.querySelectorAll('h2')[1].innerHTML = book.author;
+    BookList.querySelector('button').addEventListener('click', () => {
+         DeleteBook(book.author); });
+    bookshelf.appendChild(BookList);
+  });
 }
 
 function DisplayBook(book) {
