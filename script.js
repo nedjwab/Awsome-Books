@@ -24,7 +24,8 @@ function DeleteBook(author) {
     BookList.querySelectorAll('h2')[0].innerHTML = book.title;
     BookList.querySelectorAll('h2')[1].innerHTML = book.author;
     BookList.querySelector('button').addEventListener('click', () => {
-         DeleteBook(book.author); });
+      DeleteBook(book.author);
+    });
     bookshelf.appendChild(BookList);
   });
 }
