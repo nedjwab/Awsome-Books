@@ -25,6 +25,7 @@ function DeleteBook(author) {
     BookList.querySelectorAll('h2')[1].innerHTML = book.author;
     BookList.querySelector('button').addEventListener('click', () => {
       DeleteBook(book.author);
+      BookList.remove();
     });
     bookshelf.appendChild(BookList);
   });
