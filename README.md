@@ -36,10 +36,10 @@ go to the index.html file .
 ## Authors
 
 👤 **Nedjwa Bouraiou**
-👤 **Yussuf Bash**
+👤 **sohaibya**
 
 
-- GitHub: [@Nedjwab](https://github.com/nedjwab)[@YussufOB](https://github.com/sohaibya)
+- GitHub: [@Nedjwab](https://github.com/nedjwab)[@sohaibya](https://github.com/sohaibya)
 - LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
 
