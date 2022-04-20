@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
+
+body{
+margin:0;
+}
+
+header h1 {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Anek Telugu', sans-serif;
+}
+
+hr {
+  width: 30%;
+  margin-inline: auto;
+  border: none;
+  height: 3px;
+  background:black;
+}
+
+.tinyhr {
+  width: 20%;
+  margin-inline: auto;
+  border: none;
+  height: 2px;
+  background:black;
+}
+
+
+ h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Anek Telugu', sans-serif;
+}
+
+.bookscontainer {
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid 4px black;
+  margin:auto 150px;
+  padding:0;
+}
+
+.book-details {
+  list-style: none;
+}
+
+.book {
+  width:97%;
+  display: flex;
+  flex-direction: row;
+  font-size: 28px;
+  font-family: 'Anek Telugu', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.book:nth-child(odd){
+    background-color: #DFDFDE;
+}
+
+.remove-btn {
+  background-color: white;
+  border:solid 2px black ;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Anek Telugu', sans-serif;
+  box-shadow: 3px 3px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.remove-btn:hover {
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+input {
+  width:30%;
+  border: solid 2px black;
+  padding: 17px;
+  font-size: 19px;
+}
+
+#add-button {
+  background-color: white;
+  border:solid 2px black ;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Anek Telugu', sans-serif;
+  box-shadow: 3px 3px;
+  padding: 10px;
+  margin-right: 50px;
+}
+
+#add-button:hover{
+  cursor: pointer;
+}
