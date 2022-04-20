@@ -13,7 +13,8 @@ In this Project we have built A Books websites.
 - javascript
 - Git & Github
 
- 
+## Live Demo
+[Here](https://nedjwab.github.io/Awsome-Books/) you can find the live Demo of the website
 
 ### Install
 Download the zip file.
@@ -36,10 +37,10 @@ go to the index.html file .
 ## Authors
 
 👤 **Nedjwa Bouraiou**
-👤 **Yussuf Bash**
 
 
-- GitHub: [@Nedjwab](https://github.com/nedjwab)[@YussufOB](https://github.com/sohaibya)
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
 - LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
 

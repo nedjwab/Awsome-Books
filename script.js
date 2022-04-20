@@ -1,75 +1,76 @@
-let Books = [];
+// Select the Elements
+const container = document.querySelector('.bookscontainer');
+const addBtn = document.querySelector('form');
+const titleI = document.querySelector('.title');
+const authorI = document.querySelector('.author');
 
-// Book Div and Template const
-const temp = document.querySelector('.book');
-const bookshelf = document.querySelector('#bookshelf');
-const submit = document.querySelector('#submit');
-let idBook = Books.length;
+// Class of Books
+class Books {
+  static books = [];
 
-function Book(title, author) {
-  this.id = idBook;
-  this.title = title;
-  this.author = author;
-  idBook += 1;
-}
-function DeleteBook(author) {
-  Books = Books.filter((book) => book.author !== author);
-  localStorage.Books = JSON.stringify(Books);
-  Books = JSON.parse(localStorage.Books);
-  Books = JSON.parse(localStorage.Books);
-  bookshelf.innerHTML = '';
-  bookshelf.appendChild(temp);
-  Books.forEach((book) => {
-    const BookList = temp.content.cloneNode(true);
-    BookList.querySelectorAll('h2')[0].innerHTML = book.title;
-    BookList.querySelectorAll('h2')[1].innerHTML = book.author;
-    BookList.querySelector('button').addEventListener('click', () => {
-      DeleteBook(book.author);
-      BookList.remove();
+  id = `${Date.now()}`.slice(-10);
+
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
+
+  // Data Storage
+  static storage(books) {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  addBook() {
+    Books.books.push(this);
+    Books.storage(Books.books);
+    Books.displayBook();
+    titleI.value = '';
+    authorI.value = '';
+  }
+
+  // Display Book
+  static displayBook() {
+    if (JSON.parse(localStorage.getItem('books'))) {
+      Books.books = JSON.parse(localStorage.getItem('books'));
+    }
+
+    let list = '';
+    Books.books.forEach((book) => {
+      list += `
+      <li class="book" id="${book.id}">
+        <div class="book-details">"${book.title}" by ${book.author}</div>
+        <button type="button" class="remove-btn">Remove</button>
+      </li>
+    `;
     });
-    bookshelf.appendChild(BookList);
-  });
-}
 
-function DisplayBook(book) {
-  const BookList = temp.content.cloneNode(true);
-  BookList.querySelectorAll('h2')[0].innerHTML = book.title;
-  BookList.querySelectorAll('h2')[1].innerHTML = book.author;
-  BookList.querySelector('button').addEventListener('click', () => { DeleteBook(book.id); });
-  bookshelf.appendChild(BookList);
-}
+    container.innerHTML = list;
 
-function ReloadBooks() {
-  Books = JSON.parse(localStorage.Books);
-  bookshelf.innerHTML = '';
-  bookshelf.appendChild(temp);
-  for (let i = 0; i < Books.length; i += 1) {
-    DisplayBook(Books[i]);
+    // Remove Book eventlistner
+    document.querySelectorAll('.remove-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const targetId = e.target.parentElement.id;
+        Books.books = Books.books.filter((book) => book.id !== targetId);
+        Books.storage(Books.books);
+        e.target.parentElement.remove();
+      });
+    });
   }
 }
 
-function SaveBook(title, author) {
-  const book = new Book(title, author);
-  if (!Array.isArray(Books)) {
-    Books = [];
-  }
-  Books.push(book);
-  localStorage.Books = JSON.stringify(Books);
-  ReloadBooks();
-}
-
-function AddBook() {
-  const formAddBook = document.forms.AddBook;
-  const bookData = new FormData(formAddBook);
-  const bookTitle = bookData.get('title');
-  const bookAuthor = bookData.get('author');
-  formAddBook.reset();
-  SaveBook(bookTitle, bookAuthor);
-}
-
-submit.addEventListener('click', () => {
-  AddBook();
+let id;
+// Add Book eventlistner
+addBtn.addEventListener('submit', (e) => {
+  e.preventDefault();
+  id = `${Date.now()}`.slice(-10);
+  const title = titleI.value;
+  const author = authorI.value;
+  const newBook = new Books(id, title, author);
+  newBook.addBook();
 });
 
-// Load the Library on opening the page
-ReloadBooks();
+// Reload function
+window.onload = () => {
+  Books.displayBook();
+};
