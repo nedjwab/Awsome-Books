@@ -3,6 +3,48 @@
 
 body {
   margin: 0;
+  font-family: 'Anek Telugu', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  width: 90%;
+  margin: 15px auto 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-right: 10px;
+}
+
+nav ul li {
+  border-right: 1px solid black;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: purple;
+}
+
+#nav-contact {
+ border: none;
+}
+
+
+.heading-title {
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+#date {
+  text-align: right;
+  margin-right: 35px;
 }
 
 .heading h1 {
@@ -106,4 +148,11 @@ input {
 
 #add-button:hover {
   cursor: pointer;
+}
+
+.contact-info {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 }
