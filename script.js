@@ -82,6 +82,7 @@ addBtn.addEventListener('submit', (e) => {
   const author = authorI.value;
   const newBook = new Books(id, title, author);
   newBook.addBook();
+  location.reload();
 });
 
 
