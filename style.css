@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-header h1 {
+.heading h1 {
   margin-top: 70px;
   text-align: center;
   font-size: 30px;
