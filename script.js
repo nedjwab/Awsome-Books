@@ -39,7 +39,7 @@ class Books {
     Books.books.forEach((book) => {
       list += `
       <li class="book" id="${book.id}">
-        <div class="book-details">${book.title} by ${book.author}</div>
+        <div class="book-details">"${book.title}" by ${book.author}</div>
         <button type="button" class="remove-btn">Remove</button>
       </li>
     `;

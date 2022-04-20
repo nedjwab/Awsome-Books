@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
 
-body{
-margin:0;
+body {
+  margin: 0;
 }
 
 header h1 {
@@ -17,7 +17,7 @@ hr {
   margin-inline: auto;
   border: none;
   height: 3px;
-  background:black;
+  background: black;
 }
 
 .tinyhr {
@@ -25,25 +25,24 @@ hr {
   margin-inline: auto;
   border: none;
   height: 2px;
-  background:black;
+  background: black;
 }
 
-
- h2 {
+h2 {
   text-align: center;
   font-size: 30px;
   font-family: 'Anek Telugu', sans-serif;
 }
 
 .bookscontainer {
-  width:80%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   border: solid 4px black;
   margin-left: auto;
   margin-right: auto;
-  padding:0;
+  padding: 0;
 }
 
 .book-details {
@@ -51,22 +50,24 @@ hr {
 }
 
 .book {
-  width:97%;
+  width: 99%;
   display: flex;
   flex-direction: row;
   font-size: 28px;
   font-family: 'Anek Telugu', sans-serif;
   font-weight: 600;
   padding: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.book:nth-child(odd){
-    background-color: #DFDFDE;
+.book:nth-child(odd) {
+  background-color: #dfdfde;
 }
 
 .remove-btn {
   background-color: white;
-  border:solid 2px black ;
+  border: solid 2px black;
   font-size: 17px;
   font-weight: 600;
   font-family: 'Anek Telugu', sans-serif;
@@ -87,7 +88,7 @@ hr {
 }
 
 input {
-  width:30%;
+  width: 30%;
   border: solid 2px black;
   padding: 17px;
   font-size: 19px;
@@ -95,7 +96,7 @@ input {
 
 #add-button {
   background-color: white;
-  border:solid 2px black ;
+  border: solid 2px black;
   font-size: 17px;
   font-weight: 600;
   font-family: 'Anek Telugu', sans-serif;
@@ -103,6 +104,6 @@ input {
   padding: 10px;
 }
 
-#add-button:hover{
+#add-button:hover {
   cursor: pointer;
 }
