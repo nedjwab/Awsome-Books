@@ -33,9 +33,8 @@ nav ul li:hover {
 }
 
 #nav-contact {
- border: none;
+  border: none;
 }
-
 
 .heading-title {
   font-size: 24px;
@@ -43,9 +42,9 @@ nav ul li:hover {
 }
 
 #date {
-  position:absolute;
+  position: absolute;
   text-align: right;
-  right:5%;
+  right: 5%;
 }
 
 .heading h1 {
@@ -152,17 +151,17 @@ input {
 }
 
 .contact-info {
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-font-size:19px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 19px;
 }
 
 footer {
-  border:solid 2px black;
+  border: solid 2px black;
   width: 88%;
   margin: 15px auto 0 auto;
-  padding:9px;
+  padding: 9px;
   font-weight: 600;
 }
