@@ -45,6 +45,20 @@ class Books {
     `;
     });
 
+    const addNewSection = document.getElementById('add-new');
+    const contactSection = document.getElementById('contact');
+    const dateSection = document.getElementById('date');
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'none';
+    dateSection.innerText = new Date().toLocaleString('en-US', {
+      day: 'numeric',
+      year: 'numeric',
+      month: 'long',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+
     container.innerHTML = list;
 
     // Remove Book eventlistner
@@ -68,6 +82,30 @@ addBtn.addEventListener('submit', (e) => {
   const author = authorI.value;
   const newBook = new Books(id, title, author);
   newBook.addBook();
+  // eslint-disable-next-line no-restricted-globals
+  location.reload();
+});
+
+const addNewSection = document.getElementById('add-new');
+const contactSection = document.getElementById('contact');
+const ListSection = document.getElementById('list');
+
+document.querySelector('#nav-add-new').addEventListener('click', () => {
+  addNewSection.style.display = 'block';
+  contactSection.style.display = 'none';
+  ListSection.style.display = 'none';
+});
+
+document.querySelector('#nav-list').addEventListener('click', () => {
+  addNewSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  ListSection.style.display = 'block';
+});
+
+document.querySelector('#nav-contact').addEventListener('click', () => {
+  addNewSection.style.display = 'none';
+  contactSection.style.display = 'block';
+  ListSection.style.display = 'none';
 });
 
 // Reload function

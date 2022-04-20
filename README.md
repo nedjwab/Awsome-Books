@@ -37,11 +37,20 @@ go to the index.html file .
 ## Authors
 
 👤 **Nedjwa Bouraiou**
+👤 **Shaquille Ndunda**
+👤 **Sonia Karungi**
+
 
 
 
 - GitHub: [@Nedjwab](https://github.com/nedjwab)
 - LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
+
+- GitHub:[@shaqdeff](https://github.com/shaqdeff)
+- LinkedIn:[Shaquille Ndunda](https://www.linkedin.com/in/shaquille-ndunda-b13a95107/)
+
+- GitHub: [@SoniaKarungi](https://github.com/SoniaKarungi)
+- LinkedIn:[Sonia Karungi](https://www.linkedin.com/in/soniarmkarungi/)
 
 
 ## 🤝 Contributing
