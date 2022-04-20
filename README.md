@@ -37,10 +37,10 @@ go to the index.html file .
 ## Authors
 
 👤 **Nedjwa Bouraiou**
-👤 **sohaibya**
 
 
-- GitHub: [@Nedjwab](https://github.com/nedjwab)[@sohaibya](https://github.com/sohaibya)
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
 - LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
 
