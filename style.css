@@ -41,7 +41,8 @@ hr {
   flex-direction: column;
   justify-content: space-evenly;
   border: solid 4px black;
-  margin:auto 150px;
+  margin-left: auto;
+  margin-right: auto;
   padding:0;
 }
 
@@ -56,7 +57,7 @@ hr {
   font-size: 28px;
   font-family: 'Anek Telugu', sans-serif;
   font-weight: 600;
-  padding: 10px;
+  padding: 5px;
 }
 
 .book:nth-child(odd){
@@ -100,7 +101,6 @@ input {
   font-family: 'Anek Telugu', sans-serif;
   box-shadow: 3px 3px;
   padding: 10px;
-  margin-right: 50px;
 }
 
 #add-button:hover{
