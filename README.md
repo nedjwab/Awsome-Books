@@ -2,7 +2,7 @@
 
 # Awsome Books
 
-In this Project we have built A Books websites.
+In this Project, we have built A Books websites.
 
  
 
@@ -19,7 +19,7 @@ In this Project we have built A Books websites.
 ### Install
 Download the zip file.
 extract the folder.
-go to the index.html file .
+go to the index.html file.
 
 
 ### Prerequisites
@@ -32,7 +32,7 @@ go to the index.html file .
 ### Usage
 
 - For anyone who wants to practice html5 or/and css3
-- For anyone who wants to create CRUD website.
+- For anyone who wants to create a CRUD website.
 
 ## Authors
 
